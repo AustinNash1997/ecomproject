@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+ *
+ {
+   margin:0px;
+   padding:0px;
+ }
+body
+{
+  background-color: rgb(60, 60, 60);
+}
+
+nav
+{
+  margin:5px;
+  background-color: rgba(204, 85, 0, 0.664);
+}
+
+nav ul li
+{
+ display: inline-block;
+ padding:5px;
+}
+
+#account
+{
+  float:right;
+}
+nav ul li:hover
+{
+  background-color: rgba(216, 119, 8, 0.651);
+  box-shadow: 3px 3px rgba(10, 10, 10, 0.493)
+}

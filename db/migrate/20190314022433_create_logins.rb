@@ -1,0 +1,12 @@
+class CreateLogins < ActiveRecord::Migration[5.2]
+  def change
+    create_table :logins do |t|
+      t.string :login_id
+      t.string :customer_id
+      t.string :username
+      t.string :password
+
+      t.timestamps
+    end
+  end
+end

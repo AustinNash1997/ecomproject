@@ -19,3 +19,4 @@ tomb_raider.product_id = '1'
 tomb_raider.save
 tomb_raider.errors.full_messages
 puts 'Tomb_Raider Created.'
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

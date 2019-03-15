@@ -2,12 +2,12 @@
 
 one:
   category_id: MyString
-  name: MyString
-  description: MyString
+  name: 
+  description: 
   image: MyString
 
 two:
   category_id: MyString
-  name: MyString
-  description: MyString
+  name: 
+  description: 
   image: MyString

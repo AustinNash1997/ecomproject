@@ -1,22 +1,22 @@
 <div class="product_partial">
+  <div id="product_content">
 
-  <div id="product_image">
-    <%= image_tag (@product.image) %>
+    <div id="product_image">
+      <%= image_tag (product.image) %>
+    </div>
+
+    <div id='price_name'>
+      <p id='name'>
+        <%= link_to product.name, product %>
+      </p>
+
+      <p id='price'>
+        $<%= product.price %>
+      </p>
+    </div>
   </div>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= @product.price %>
-  </p>
-
+  <div id="image_overlay">
+    <%= image_tag ('Dragon_Overlay') %>
+  </div>
 </div>

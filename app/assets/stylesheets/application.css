@@ -13,20 +13,17 @@
  *= require_tree .
  *= require_self
  */
- *
- {
-   margin:0px;
-   padding:0px;
- }
-body
+
+*
 {
-  background-color: rgb(60, 60, 60);
+  margin: 0px;
+  padding: 0px;
 }
 
 nav
 {
   margin:5px;
-  background-color: rgba(204, 85, 0, 0.664);
+  background-color: rgba(23, 51, 206, 0.938);
 }
 
 nav ul li
@@ -41,6 +38,15 @@ nav ul li
 }
 nav ul li:hover
 {
-  background-color: rgba(216, 119, 8, 0.651);
+  background-color: rgba(114, 202, 243, 0.432);
   box-shadow: 3px 3px rgba(10, 10, 10, 0.493)
+}
+a
+{
+  text-decoration: none;
+}
+a:hover, a:active, a:visited
+{
+  text-decoration: none;
+
 }

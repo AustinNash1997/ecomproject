@@ -1,3 +1,121 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#products
+{
+  color: black;
+  padding:10px;
+  min-width: 400px;
+}
+.product_partial
+{
+  width: 230px;
+  padding: 20px 10px;
+  height: 275px;
+  border: 1px rgba(64, 91, 241, 0.466) solid;
+  border-radius: 95% 95% 80% 80%;
+
+  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%,
+   rgba(41,137,216,1) 46%,
+   rgba(32,124,202,1) 68%,
+   rgba(32,124,202,1) 71%,
+   rgba(125,185,232,1) 100%);
+
+   float: left;
+}
+
+.product_partial:hover
+{
+  box-shadow: 5px 5px rgba(64, 91, 241, 0.295);
+}
+
+#product_content
+{
+  margin: 0px auto;
+  width: 150px;
+  height: 280px;
+  position: relative;
+}
+
+#product_image img
+{
+  max-height: 50%;
+  max-width: 100%;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 2px rgba(1, 1, 1, 0.233);
+}
+#image_overlay
+{
+  margin: 0px auto;
+  position: relative;
+  bottom: 215px;
+  left: -15px;
+}
+#image_overlay img
+{
+  width: 105%;
+  height: 100%;
+}
+
+#price_name
+{
+  background-color: rgba(1, 1, 1, 0.233);
+  height: 50px;
+  border-radius:25px 25px 50px 50px;
+  vertical-align: middle;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+}
+#name
+{
+  margin: 0px auto;
+  padding: 4px;
+}
+
+#price
+{
+  margin: 0px auto;
+  padding: 4px;
+
+}
+
+#other_info
+{
+  margin-top:10px;
+  padding: 10px;
+  float: right;
+  width: 40%;
+  min-width: 300px;
+  border: 1px solid black;
+
+  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%,
+  rgba(41,137,216,0.4) 46%,
+  rgba(32,124,202,0.4) 68%,
+  rgba(32,124,202,0.4) 71%,
+  rgba(125,185,232,0.4) 100%);
+
+  border-radius: 25px;
+}
+
+#product_id
+{
+  float:left;
+}
+
+#product_category
+{
+  float:right;
+}
+
+#product_description
+{
+  padding-top:10px;
+  clear:both;
+}
+
+#new
+{
+  clear:both;
+}

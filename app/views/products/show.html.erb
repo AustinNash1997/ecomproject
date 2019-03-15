@@ -11,15 +11,15 @@
     </p>
     <p id='product_category'>
       <strong>Category:</strong>
-      <%= @product.category_id %>
+      <%= @product.Category.name %>
     </p>
     <p id='product_description'>
       <strong>Description:</strong>
       <%= @product.description %>
     </p>
     <br>
-    <%# <%= link_to 'Edit', edit_product_path(@product) %> | %>
-    <%= link_to 'Back', products_path %> |
+    <%# <%= link_to 'Edit', edit_product_path(@product) %>
+    <%= link_to 'Back', products_path %>
     <%# <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %></p> %>
 
   </div>

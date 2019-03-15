@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :products
   root 'category#index'
   get 'category/show'
   get 'category/edit'

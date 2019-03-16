@@ -13,6 +13,7 @@ AdminUser.destroy_all
 
 single_player = Category.new
 single_player.name = 'Single Player'
+single_player.id = '1'
 single_player.category_id = '1'
 single_player.description = 'A single-player video game is a video game where input from only one player is expected throughout the course of the gaming session.'
 single_player.image = 'single_player'
@@ -22,6 +23,7 @@ puts 'single player category created.'
 
 multiplayer = Category.new
 multiplayer.name = 'Multiplayer'
+multiplayer.id = '2'
 multiplayer.category_id = '2'
 multiplayer.description = 'A multiplayer video game is a video game in which more than one person can play in the same game environment at the same time, either locally or over the internet.'
 multiplayer.image = 'multiplayer'

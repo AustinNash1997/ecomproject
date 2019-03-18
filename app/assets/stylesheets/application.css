@@ -20,6 +20,14 @@
   padding: 0px;
 }
 
+#header
+{
+  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%,
+  rgba(41,137,216,1) 46%,
+  rgba(32, 123, 202, 0.603) 68%,
+  rgba(32, 123, 202, 0.623) 71%,
+  rgba(125, 186, 232, 0.425) 100%);
+}
 #header img
 {
   float: left;
@@ -29,13 +37,13 @@
 
 #header h1
 {
+  padding:10px;
   float:right;
 }
 
 nav
 {
-  margin:5px;
-  background-color: rgba(23, 51, 206, 0.938);
+  background-color: rgba(23, 51, 206, 0.466);
   clear:both;
 }
 
@@ -61,5 +69,6 @@ a
 a:hover, a:active, a:visited
 {
   text-decoration: none;
+  color:black;
 
 }

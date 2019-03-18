@@ -2,4 +2,6 @@
 
 class Product < ApplicationRecord
   belongs_to :category
+
+  validates :category_id, :name, :description, :price, presence: true
 end

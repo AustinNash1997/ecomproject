@@ -30,8 +30,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
-gem 'formtastic', '~> 3.0'
-
+gem 'formtastic'
+gem 'haml'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

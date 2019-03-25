@@ -16,7 +16,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @category.image %>
+  <%= image_tag @category.image %>
 </p>
 
 <%= link_to 'Search All', products_path(category:@category.id) %>

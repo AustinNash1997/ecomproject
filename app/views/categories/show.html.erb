@@ -19,5 +19,5 @@
   <%= @category.image %>
 </p>
 
-<%= link_to 'Search All', products_path(category_id:@category.id) %>
+<%= link_to 'Search All', products_path(category:@category.id) %>
 <%= link_to 'Back', categories_path %>

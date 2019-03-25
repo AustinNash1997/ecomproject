@@ -4,13 +4,9 @@ class ProductsController < InheritedResources::Base
   def index
     @products = if params[:category]
                   Product.where(category_id: params[:category])
-
                 elsif params[:search]
-                  @search = params[:search]
-                  Product.where('name LIKE ?', '%#@search%')
-
+                  Product.where('name LIKE ?', '%#params[:search]%')
                 else
-
                   Product.all
                 end
   end

@@ -10,7 +10,7 @@ ActiveAdmin.register Product do
     attributes_table do
       row :title
       row :image do |ad|
-        if ad.image.present?
+        if ad.image.attached?
           image_tag url_for(ad.image)
         end
       end

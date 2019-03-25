@@ -5,5 +5,5 @@ class Product < ApplicationRecord
 
   validates :category_id, :name, :description, :price, presence: true
 
-  # has_one_attached :image
+  has_one_attached :image
 end

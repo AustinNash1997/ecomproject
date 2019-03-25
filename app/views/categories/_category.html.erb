@@ -2,7 +2,9 @@
   <div id="category_content">
 
     <div id="category_image">
-      <%= image_tag (category.image) %>
+      <% if category.image.attached?%>
+        <%= image_tag (category.image) %>
+      <% end %>
     </div>
 
     <div id='category_name'>

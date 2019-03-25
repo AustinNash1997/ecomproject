@@ -2,7 +2,9 @@
   <div id="product_content">
 
     <div id="product_image">
-      <%= image_tag (product.image) %>
+      <% if product.image.attached?%>
+        <%= image_tag (product.image) %>
+      <% end%>
     </div>
 
     <div id='price_name'>

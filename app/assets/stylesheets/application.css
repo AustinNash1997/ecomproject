@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
 
 *
 {
@@ -26,18 +27,25 @@
   rgba(41,137,216,1) 46%,
   rgba(32, 123, 202, 0.603) 68%,
   rgba(32, 123, 202, 0.623) 71%,
-  rgba(125, 186, 232, 0.425) 100%);
+  rgba(125, 186, 232, 0.61) 100%);
+
+  position: relative;
+
+  overflow: hidden;
+  width:100%;
 }
 #header img
 {
   float: left;
   width: 110px;
   height: 110px;
+  position: relative;
 }
 
 #header h1
 {
   padding:10px;
+  position: relative;
   float:right;
 }
 
@@ -75,6 +83,7 @@ a:hover
 {
   text-decoration: black underline;
 }
+
 
 .login_form
 {
@@ -166,6 +175,11 @@ a:hover
 .search_bar input
 {
   border-radius: 4px;
+}
+
+#btnsearch
+{
+  border-radius: 6px 0px 6px 0px;
 }
 
 #btnsearch:hover

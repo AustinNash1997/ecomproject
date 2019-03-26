@@ -3,7 +3,7 @@
 
     <div class="category_image">
       <% if category.image.attached?%>
-        <%= image_tag (category.image) %>
+        <%= image_tag(category.image, alt: "category") %>
       <% end %>
     </div>
 

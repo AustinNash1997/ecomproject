@@ -11,7 +11,7 @@
 
   <body>
   <div id='header'>
-    <%= image_tag ('logo')%>
+    <%= image_tag('logo', alt:"logo")%>
     <h1>Numb Dragon</h1>
 
       <div class="search_bar">
@@ -46,13 +46,15 @@
     </nav>
   </div>
   <br>
-  <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-  <% end %>
+  <div class="content">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
 
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %> </p>
-  <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %> </p>
+    <% end %>
     <%= yield %>
+    </div>
   </body>
 </html>

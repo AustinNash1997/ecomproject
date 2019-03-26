@@ -14,11 +14,18 @@
  *= require_self
  */
  @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Germania+One');
 
 *
 {
   margin: 0px;
   padding: 0px;
+}
+
+html, body
+{
+  width:100%;
+  height:100%;
 }
 
 #header
@@ -47,6 +54,9 @@
   padding:10px;
   position: relative;
   float:right;
+  font-family: 'Germania One', cursive;
+  font-size: 3em;
+  color:black;
 }
 
 nav
@@ -185,4 +195,15 @@ a:hover
 #btnsearch:hover
 {
   box-shadow: 2px 3px rgba(10, 10, 10, 0.493);
+}
+
+.content
+{
+  padding:10px;
+}
+
+.footer
+{
+  clear:both;
+  bottom:0px;
 }

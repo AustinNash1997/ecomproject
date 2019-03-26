@@ -1,12 +1,11 @@
 
 <h1>Games</h1>
 
-<br />
 <div class="products">
     <% @products.each do |product| %>
         <%= render partial: 'products/product',
         locals: {product: product} %>
     <% end %>
-
+    <p class="found">Found <%= @products.count %> items. </p>
 </div>
 

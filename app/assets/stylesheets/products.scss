@@ -40,8 +40,8 @@
 
 .product_image img
 {
-  max-height: 50%;
-  max-width: 100%;
+  height: 210px;
+  width: 150px;
   position: relative;
   border-radius: 15px;
   box-shadow: 2px 2px 2px 2px rgba(1, 1, 1, 0.233);
@@ -62,23 +62,21 @@
 .price_name
 {
   background-color: rgba(1, 1, 1, 0.233);
-  height: 50px;
+  height: 65px;
   border-radius:25px 25px 50px 50px;
   vertical-align: middle;
-  padding: 5px;
+  padding: 1px;
   position: relative;
   text-align: center;
 }
 .name
 {
   margin: 0px auto;
-  padding: 4px;
 }
 
 .price
 {
   margin: 0px auto;
-  padding: 4px;
 
 }
 

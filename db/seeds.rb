@@ -53,4 +53,48 @@ black_ops.save
 black_ops.errors.full_messages
 puts 'Black_Ops_IV Created.'
 
+assassins_creed_origins = Product.new
+assassins_creed_origins.name = 'Assassins Creed: Origins'
+assassins_creed_origins.description = "Assassin's Creed Origins is an action-adventure video game developed by Ubisoft Montreal and published by Ubisoft. It is the tenth major installment in the Assassin's Creed series and the successor to 2015's Assassin's Creed Syndicate."
+assassins_creed_origins.price = '30.00'
+assassins_creed_origins.image = ''
+assassins_creed_origins.category_id = '1'
+assassins_creed_origins.product_id = '3'
+assassins_creed_origins.save
+assassins_creed_origins.errors.full_messages
+puts 'ACO Created.'
+
+apex = Product.new
+apex.name = 'Apex Legends'
+apex.description = 'Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts. However, this copy contains the battlepass!'
+apex.price = '15.00'
+apex.image = ''
+apex.category_id = '2'
+apex.product_id = '4'
+apex.save
+apex.errors.full_messages
+puts 'Apex_Legends Created'
+
+rainbow = Product.new
+rainbow.name = 'Rainbow Six Siege'
+rainbow.description = "Tom Clancy's Rainbow Six Siege (often shortened to Rainbow Six Siege) is a tactical shooter video game developed by Ubisoft Montreal and published by Ubisoft. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on December 1, 2015. The game puts heavy emphasis on environmental destruction and cooperation between players."
+rainbow.price = '25.00'
+rainbow.image = ''
+rainbow.category_id = '2'
+rainbow.product_id = '5'
+rainbow.save
+rainbow.errors.full_messages
+puts 'Rainbow_Six_Siege Created.'
+
+sekiro = Product.new
+sekiro.name = 'Sekiro: Shadows Die Twice'
+sekiro.description = 'Sekiro: Shadows Die Twice[a] is an action-adventure video game developed by FromSoftware and published by Activision. The game was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on March 22, 2019. The game follows a Sengoku period shinobi known as Sekiro as he attempts to take revenge on a samurai who attacked him and kidnapped his lord. The game received universal acclaim from critics.'
+sekiro.price = '80.00'
+sekiro.image = ''
+sekiro.category_id = '1'
+sekiro.product_id = '6'
+sekiro.save
+sekiro.errors.full_messages
+puts 'Sekiro_Shadows_Die_Twice Created'
+
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

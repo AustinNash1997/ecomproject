@@ -6,7 +6,6 @@ class ProductsController < InheritedResources::Base
                   Product.where(category_id: params[:category])
                 elsif params[:search]
                   Product.where('name LIKE ?', "%#{params[:search]}%")
-                  puts "yes"
                 else
                   Product.all
                 end

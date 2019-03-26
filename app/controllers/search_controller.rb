@@ -4,5 +4,6 @@ class SearchController < ApplicationController
   end
 
   def results
+    @products = Product.where("name LIKE ?","%#{params[:q]}%")
   end
 end

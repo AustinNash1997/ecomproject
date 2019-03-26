@@ -1,18 +1,18 @@
-<div id='show'>
+<div class='show'>
 
   <%= render partial: 'products/product',
   locals: {product: @product} %>
 
-  <div id='other_info'>
-    <p id='product_id'>
+  <div class='other_info'>
+    <p class='product_id'>
       <strong>Product:</strong>
       <%= @product.product_id %>
     </p>
-    <p id='product_category'>
+    <p class='product_category'>
       <strong>Category:</strong>
-      <%= @product.category.name %>
+      <%= link_to @product.category.name, category_path(@product.category.id) %>
     </p>
-    <p id='product_description'>
+    <p class='product_description'>
       <strong>Description:</strong>
       <%= @product.description %>
     </p>

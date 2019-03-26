@@ -1,14 +1,14 @@
-<div id='category_partial'>
-  <div id="category_content">
+<div class='category_partial'>
+  <div class="category_content">
 
-    <div id="category_image">
+    <div class="category_image">
       <% if category.image.attached?%>
         <%= image_tag (category.image) %>
       <% end %>
     </div>
 
-    <div id='category_name'>
-      <p id='name'>
+    <div class='category_name'>
+      <p class='name'>
         <%= link_to category.name, category %>
       </p>
     </div>

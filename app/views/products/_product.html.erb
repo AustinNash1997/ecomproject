@@ -1,24 +1,24 @@
 <div class="product_partial">
-  <div id="product_content">
+  <div class="product_content">
 
-    <div id="product_image">
+    <div class="product_image">
       <% if product.image.attached?%>
         <%= image_tag (product.image) %>
       <% end%>
     </div>
 
-    <div id='price_name'>
-      <p id='name'>
+    <div class='price_name'>
+      <p class='name'>
         <%= link_to product.name, product %>
       </p>
 
-      <p id='price'>
+      <p class='price'>
         $<%= product.price %>
       </p>
     </div>
   </div>
 
-  <div id="image_overlay">
+  <div class="image_overlay">
     <%= image_tag ('Dragon_Overlay') %>
   </div>
 </div>

@@ -1,23 +1,20 @@
+<div class="show">
 
-<p>
-  <strong>Category:</strong>
-  <%= @category.category_id %>
-</p>
+  <%= render partial: 'categories/category',
+  locals: {category: @category} %>
+  <div class="other_info">
+    <p>
+      <strong>Category:</strong>
+      <%= @category.category_id %>
+    </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+    <p>
+      <strong>Description:</strong>
+      <%= @category.description %>
+    </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @category.description %>
-</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @category.image %>
-</p>
-
-<%= link_to 'Search All', products_path(category:@category.id) %>
-<%= link_to 'Back', categories_path %>
+    <%= link_to 'Search All', products_path(category:@category.id) %> |
+    <%= link_to 'Back', categories_path %>
+  </div>
+</div>

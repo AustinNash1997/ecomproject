@@ -13,6 +13,14 @@
   <div id='header'>
     <%= image_tag ('logo')%>
     <h1>Numb Dragon</h1>
+
+      <div class="search_bar">
+        <%= form_tag(products_path method: :get) do %>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag 'Search', name: nil, id: 'btnsearch' %>
+        <% end %>
+      </div>
+
     <nav>
       <ul>
         <li><%= link_to 'Home', products_path %></li>
@@ -21,10 +29,10 @@
 
         <% if user_signed_in? %>
           <li class='account'>
-            <%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %>
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
           </li>
           <li class='account'>
-            <%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+            <%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link' %>
           </li>
         <% else %>
           <li class='account'>
@@ -35,18 +43,6 @@
           </li>
         <% end %>
       </ul>
-
-
-
-      <%= form_tag(products_path method: :get) do %>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag 'Search', name: nil %>
-      <% end %>
-
-
-
-
-
     </nav>
   </div>
   <br>

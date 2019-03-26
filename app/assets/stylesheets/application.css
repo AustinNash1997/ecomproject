@@ -68,9 +68,12 @@ a
 }
 a:hover, a:active, a:visited
 {
-  text-decoration: none;
   color:black;
+}
 
+a:hover
+{
+  text-decoration: black underline;
 }
 
 .login_form
@@ -149,8 +152,23 @@ a:hover, a:active, a:visited
   text-align: center;
 }
 
-#search input
+.search_bar
 {
-  padding: 5px;
+  clear:both;
+  position: relative;
+  width: 200px;
+  float:right;
+  align-self: auto;
+  bottom: 10px;
+}
+
+
+.search_bar input
+{
   border-radius: 4px;
+}
+
+#btnsearch:hover
+{
+  box-shadow: 2px 3px rgba(10, 10, 10, 0.493);
 }

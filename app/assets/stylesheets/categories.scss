@@ -6,6 +6,7 @@
   color: black;
   padding:10px;
   min-width: 400px;
+  text-align: center;
 }
 .category_partial
 {
@@ -22,7 +23,7 @@
    rgba(32,124,202,1) 71%,
    rgba(125,185,232,1) 100%);
 
-   float: left;
+   display: inline-grid;
 }
 
 .category_partial:hover

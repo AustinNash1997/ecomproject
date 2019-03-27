@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_25_223302) do
+ActiveRecord::Schema.define(version: 2019_03_27_210638) do
 
   create_table "abouts", force: :cascade do |t|
     t.string "title"
@@ -98,21 +98,30 @@ ActiveRecord::Schema.define(version: 2019_03_25_223302) do
   end
 
   create_table "order_items", force: :cascade do |t|
-    t.string "order_item_id"
-    t.string "order_id"
-    t.string "product_id"
+    t.integer "product_id"
+    t.integer "order_id"
+    t.string "price"
     t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+    t.index ["product_id"], name: "index_order_items_on_product_id"
+  end
+
+  create_table "order_statuses", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "order_id"
-    t.string "customer_id"
-    t.string "order_date"
-    t.string "paid"
+    t.string "subtotal"
+    t.string "tax"
+    t.string "total"
+    t.integer "order_statud_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["order_statud_id"], name: "index_orders_on_order_statud_id"
   end
 
   create_table "products", force: :cascade do |t|

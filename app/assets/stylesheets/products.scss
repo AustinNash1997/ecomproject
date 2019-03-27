@@ -10,13 +10,13 @@
 }
 .product_partial
 {
-  margin:0px 10px;
+  margin:10px;
   width: 230px;
   padding: 20px 10px;
   height: 275px;
   border: 1px rgba(64, 91, 241, 0.466) solid;
   border-radius: 95% 95% 80% 80%;
-  display: inline-block;
+  display: inline-grid;
 
   background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%,
    rgba(41,137,216,1) 46%,

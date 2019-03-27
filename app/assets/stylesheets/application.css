@@ -53,7 +53,7 @@ html, body
 {
   padding:10px;
   position: relative;
-  float:right;
+  float:left;
   font-family: 'Germania One', cursive;
   font-size: 3em;
   color:black;
@@ -61,7 +61,7 @@ html, body
 
 nav
 {
-  background-color: rgba(23, 51, 206, 0.466);
+  background-color: rgba(23, 51, 206, 0.11);
   clear:both;
 }
 
@@ -78,7 +78,7 @@ nav ul li
 nav ul li:hover
 {
   background-color: rgba(114, 202, 243, 0.432);
-  box-shadow: 3px 3px rgba(10, 10, 10, 0.493)
+  box-shadow: 3px 4px rgba(10, 10, 10, 0.493)
 }
 a
 {

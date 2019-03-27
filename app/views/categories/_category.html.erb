@@ -1,16 +1,18 @@
 <div class='category_partial'>
-  <div class="category_content">
+  <%= link_to category, :action => 'go' do%>
+    <div class="category_content">
 
-    <div class="category_image">
-      <% if category.image.attached?%>
-        <%= image_tag(category.image, alt: "category") %>
-      <% end %>
-    </div>
+      <div class="category_image">
+        <% if category.image.attached?%>
+          <%= image_tag(category.image, alt: "category") %>
+        <% end %>
+      </div>
 
-    <div class='category_name'>
-      <p class='name'>
-        <%= link_to category.name, category %>
-      </p>
+      <div class='category_name'>
+        <p class='name'>
+          <%= link_to category.name, category %>
+        </p>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>

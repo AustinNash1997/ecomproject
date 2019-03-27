@@ -10,23 +10,10 @@
   </head>
 
   <body>
-  <div id='header'>
-    <%# <%= image_tag('logo', alt:"logo")%>
-    <h1>Numb Dragon</h1>
-
-      <div class="search_bar">
-        <%= form_tag(products_path, method: "get") do %>
-          <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag 'Search', id: 'btnsearch' %>
-        <% end %>
-      </div>
-
-    <nav>
+    <div id='header'>
+      <%# <%= image_tag('logo', alt:"logo")%>
+      <h1>Numb Dragon</h1>
       <ul>
-        <li><%= link_to 'Home', products_path %></li>
-        <li><%= link_to 'Category', categories_path %></li>
-        <li><%= link_to 'About', 'about' %></li>
-
         <% if user_signed_in? %>
           <li class='account'>
             <%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
@@ -43,21 +30,55 @@
           </li>
         <% end %>
       </ul>
+
+
+    </div>
+
+    <nav id='navbar'>
+      <ul>
+        <li><%= link_to 'Home', products_path %></li>
+        <li><%= link_to 'Category', categories_path %></li>
+        <li><%= link_to 'About', 'about' %></li>
+        
+        <div class="search_bar">
+          <%= form_tag(products_path, method: "get") do %>
+            <%= text_field_tag :search, params[:search] %>
+            <%= submit_tag 'Search', id: 'btnsearch' %>
+          <% end %>
+        </div>
+
+      </ul>
     </nav>
-  </div>
-  <div class="content">
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
 
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %> </p>
-    <% end %>
-    <%= yield %>
+    <div class="content">
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
 
-    <div class="footer">
-      <p>CopyWrong 2019</p>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %> </p>
+      <% end %>
+      <%= yield %>
+
+      <div class="footer">
+        <p>CopyWrong 2019</p>
+      </div>
     </div>
-    </div>
+
+    <script>
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+
   </body>
 </html>

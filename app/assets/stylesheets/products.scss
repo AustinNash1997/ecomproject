@@ -14,15 +14,10 @@
   width: 230px;
   padding: 20px 10px;
   height: 275px;
-  border: 1px rgba(64, 91, 241, 0.466) solid;
-  border-radius: 95% 95% 80% 80%;
   display: inline-grid;
-
-  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%,
-   rgba(41,137,216,1) 46%,
-   rgba(32,124,202,1) 68%,
-   rgba(32,124,202,1) 71%,
-   rgba(125,185,232,1) 100%);
+  border-radius: 10px;
+  border: 1px solid rgba(59, 59, 59, 0.089);
+  position: relative;
 }
 
 .product_partial:hover
@@ -49,9 +44,9 @@
 .image_overlay
 {
   margin: 0px auto;
-  position: relative;
-  bottom: 215px;
-  left: -15px;
+  position: absolute;
+  top: 90px;
+  right: 25px;
 }
 .image_overlay img
 {
@@ -61,9 +56,7 @@
 
 .price_name
 {
-  background-color: rgba(1, 1, 1, 0.233);
   height: 65px;
-  border-radius:25px 25px 50px 50px;
   vertical-align: middle;
   padding: 1px;
   position: relative;
@@ -72,6 +65,7 @@
 .name
 {
   margin: 0px auto;
+  color: rgba(44, 58, 255, 0.959);
 }
 
 .price
@@ -84,7 +78,6 @@
 {
   margin-top:10px;
   padding: 10px;
-  float: right;
   width: 40%;
   min-width: 300px;
   border: 1px solid black;

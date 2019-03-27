@@ -22,6 +22,7 @@
   padding: 0px;
 }
 
+
 html, body
 {
   width:100%;
@@ -30,16 +31,10 @@ html, body
 
 #header
 {
-  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%,
-  rgba(41,137,216,1) 46%,
-  rgba(32, 123, 202, 0.603) 68%,
-  rgba(32, 123, 202, 0.623) 71%,
-  rgba(125, 186, 232, 0.61) 100%);
-
   position: relative;
-
-  overflow: hidden;
+  height: 40px;
   width:100%;
+  background-image: linear-gradient(45deg, #fdfbfb 0%, #d5dadb 100%);
 }
 #header img
 {
@@ -56,13 +51,50 @@ html, body
   float:left;
   font-family: 'Germania One', cursive;
   font-size: 3em;
-  color:black;
+  color:rgb(30, 83, 182);
+}
+
+h1
+{
+  font-size: 2.5em;
+  font-family: 'Germania One', cursive;
+  color:rgb(30, 83, 182);
 }
 
 nav
 {
-  /* background-color: rgba(23, 51, 206, 0.11); */
+  overflow: hidden;
   clear:both;
+  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%,
+  rgba(41,137,216,1) 46%,
+  rgba(32, 123, 202, 0.897) 68%,
+  rgba(32, 123, 202, 0.918) 71%,
+  rgba(125, 186, 232, 0.87) 100%);
+  z-index: 1;
+}
+
+nav ul li a, nav ul li a:active, nav ul li a:visited, nav ul li a:hover
+{
+  color: white;
+}
+
+nav ul li a:hover
+{
+  text-decoration: white underline;
+}
+
+#navbar ul
+{
+  vertical-align: middle;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 48px;
 }
 
 nav ul li
@@ -93,7 +125,17 @@ a:hover
 {
   text-decoration: black underline;
 }
+ul li
+{
+  list-style: none;
+  text-decoration: none;
+}
 
+.account
+{
+  padding:10px;
+  font-size: 10px;
+}
 
 .login_form
 {
@@ -178,7 +220,7 @@ a:hover
   width: 200px;
   float:right;
   align-self: auto;
-  padding:10px;
+  top: 5px;
 }
 
 
@@ -200,6 +242,7 @@ a:hover
 .content
 {
   padding:10px;
+
 }
 
 .footer

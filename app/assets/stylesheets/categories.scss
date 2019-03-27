@@ -8,22 +8,19 @@
   min-width: 400px;
   text-align: center;
 }
+.show
+{
+  text-align: center;
+}
 .category_partial
 {
-  margin: 10px;
+  margin:10px;
   width: 230px;
   padding: 20px 10px;
   height: 275px;
-  border: 1px rgba(64, 91, 241, 0.466) solid;
-  border-radius: 95% 95% 80% 80%;
-
-  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%,
-   rgba(41,137,216,1) 46%,
-   rgba(32,124,202,1) 68%,
-   rgba(32,124,202,1) 71%,
-   rgba(125,185,232,1) 100%);
-
-   display: inline-grid;
+  display: inline-grid;
+  border-radius: 10px;
+  border: 1px solid rgba(59, 59, 59, 0.089);
 }
 
 .category_partial:hover
@@ -57,9 +54,7 @@
 
 .category_name
 {
-  background-color: rgba(1, 1, 1, 0.233);
   height: 50px;
-  border-radius:25px 25px 50px 50px;
   vertical-align: middle;
   padding: 5px;
   position: relative;

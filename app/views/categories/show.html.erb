@@ -4,17 +4,11 @@
   locals: {category: @category} %>
   <div class="other_info">
     <p>
-      <strong>Category:</strong>
-      <%= @category.category_id %>
-    </p>
-
-    <p>
       <strong>Description:</strong>
       <%= @category.description %>
     </p>
 
-
-    <%= link_to 'Search All', products_path(category:@category.id) %> |
+    <%= link_to "Search All #{@category.name} Games", products_path(category:@category.id) %> |
     <%= link_to 'Back', categories_path %>
   </div>
 </div>

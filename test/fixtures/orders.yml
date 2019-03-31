@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  subtotal: MyString
-  tax: MyString
-  total: MyString
-  order_statud: one
+  subtotal: 9.99
+  tax: 9.99
+  total: 9.99
+  order_status: one
 
 two:
-  subtotal: MyString
-  tax: MyString
-  total: MyString
-  order_statud: two
+  subtotal: 9.99
+  tax: 9.99
+  total: 9.99
+  order_status: two

@@ -277,3 +277,13 @@ ul li
    z-index: 1;
   width: 100%;
 }
+
+.well
+{
+  display:inline-block;
+}
+
+.shopping-cart
+{
+  text-align: center;
+}

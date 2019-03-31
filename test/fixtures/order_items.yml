@@ -3,11 +3,13 @@
 one:
   product: one
   order: one
-  price: MyString
+  unit_price: 9.99
   quantity: 1
+  total_price: 9.99
 
 two:
   product: two
   order: two
-  price: MyString
+  unit_price: 9.99
   quantity: 1
+  total_price: 9.99

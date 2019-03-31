@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'order_items/create'
+  get 'order_items/update'
+  get 'order_items/destroy'
+  get 'carts/show'
   devise_for :users
   get 'about/index'
   resources :about
@@ -12,6 +16,9 @@ Rails.application.routes.draw do
 
   get 'category/show'
   get 'category/edit'
+
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
 
   resources :search, only: [:index] do
     collection do

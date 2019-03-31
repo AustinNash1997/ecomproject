@@ -1,21 +1,29 @@
 <div class="product_partial">
-  <%= link_to product, :action => 'go' do %>
-    <div class="product_content">
-
+  <div class="product_content">
+    <%= link_to product do %>
       <div class="product_image">
         <% if product.image.attached?%>
           <%= image_tag(product.image, alt:"product") %>
         <% end%>
       </div>
+    <% end %>
 
       <div class='price_name'>
         <p class='name'>
-          <%= link_to product.name, product %>
+          <%= product.name %>
         </p>
 
-        <p class='price'>
-          <%= number_to_currency(product.price) %>
-        </p>
+
+        <%= form_for @order_item, remote: true do |f| %>
+          <h5>Unit Price: <span style="color: green"><%= number_to_currency product.price %></span></h5>
+          <div class="input-group">
+            <%= f.number_field :quantity, value: 1, class: "form-control", style:"z-index: 0;", min: 1 %>
+            <div class="input-group-btn">
+              <%= f.hidden_field :product_id, value: product.id %>
+              <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+            </div>
+            <% end %>
+          </div>
       </div>
     </div>
     <%= link_to product, :action => 'go' do %>
@@ -24,5 +32,4 @@
         <%= image_tag('Dragon_Overlay',alt:"overlay") %>
       </div>
     <% end %>
-  <% end %>
 </div>

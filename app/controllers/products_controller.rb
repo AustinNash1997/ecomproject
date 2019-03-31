@@ -2,6 +2,8 @@
 
 class ProductsController < InheritedResources::Base
   def index
+    @order_item = current_order.order_items.new
+
     @products = if params[:category]
                   Product.where(category_id: params[:category])
                 elsif params[:search]
@@ -10,6 +12,7 @@ class ProductsController < InheritedResources::Base
                   Product.all
                 end
   end
+
 
   private
 

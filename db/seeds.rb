@@ -103,4 +103,6 @@ OrderStatus.create! id: 2, name: 'Placed'
 OrderStatus.create! id: 3, name: 'Complete'
 OrderStatus.create! id: 4, name: 'Cancelled'
 
+About.create! title: "About", content: "We are Numb Dragon, an online game store."
+
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

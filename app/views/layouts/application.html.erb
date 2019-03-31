@@ -7,6 +7,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <% if request.ssl? %>
+      <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+      <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+    <% else %>
+      <%= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+      <%= javascript_include_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+    <% end %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%= csrf_meta_tags %>
+
   </head>
 
   <body>
@@ -39,18 +52,25 @@
         <li><%= link_to 'Home', products_path %></li>
         <li><%= link_to 'Category', categories_path %></li>
         <li><%= link_to 'About', 'about' %></li>
-        
-        <div class="search_bar">
-          <%= form_tag(products_path, method: "get") do %>
-            <%= text_field_tag :search, params[:search] %>
-            <%= submit_tag 'Search', id: 'btnsearch' %>
-          <% end %>
-        </div>
-
       </ul>
+
+        <%= form_tag(products_path, method: "get", class:"search_bar") do %>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag 'Search', id: 'btnsearch' %>
+        <% end %>
     </nav>
 
     <div class="content">
+
+    <div class="row">
+      <div class="col-xs-6">
+        <h1><%= link_to "My Store", root_path %></h1>
+      </div>
+      <div class="col-xs-6 text-right">
+        <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
+      </div>
+    </div>
+
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
       <% end %>
@@ -59,11 +79,11 @@
         <p class="alert alert-danger"><%= alert %> </p>
       <% end %>
       <%= yield %>
-
-      <div class="footer">
-        <p>CopyWrong 2019</p>
-      </div>
     </div>
+
+      <footer class="footer">
+        <p>CopyWrong 2019</p>
+      </footer>
 
     <script>
       window.onscroll = function() {myFunction()};

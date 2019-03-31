@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class OrderStatus < ApplicationRecord
+class OrderStatus < ActiveRecord::Base
   has_many :orders
 end

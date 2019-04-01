@@ -26,10 +26,11 @@
   width: 230px;
   padding: 20px 10px;
   height: 300px;
-  display: inline-grid;
+  display: inline-block;
   border-radius: 10px;
   border: 1px solid rgba(59, 59, 59, 0.24);
   position: relative;
+  clear:both;
 }
 
 .product_partial:hover
@@ -114,6 +115,12 @@
 .show .product_partial
 {
   size: 120%;
+}
+
+.show
+{
+  text-align: center;
+  clear:both;
 }
 
 .product_category

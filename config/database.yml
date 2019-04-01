@@ -36,11 +36,11 @@ test:
   <<: *default
   database: final_test
 
-# production:
-#   <<: *default
-#   database: final_production
-#   username: final
-#   password: <%= ENV['FINAL_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: final_production
+  username: final
+  password: <%= ENV['FINAL_DATABASE_PASSWORD'] %>
 
 production:
 url: <%= ENV['DATABASE_URL'] %>

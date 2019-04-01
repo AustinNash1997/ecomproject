@@ -42,5 +42,5 @@ production:
   username: final
   password: <%= ENV['FINAL_DATABASE_PASSWORD'] %>
 
-production:
-url: <%= ENV['DATABASE_URL'] %>
+# production:
+# url: <%= ENV['DATABASE_URL'] %>

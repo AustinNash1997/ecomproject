@@ -79,7 +79,7 @@ rainbow = Product.new
 rainbow.name = 'Rainbow Six Siege'
 rainbow.description = "Tom Clancy's Rainbow Six Siege (often shortened to Rainbow Six Siege) is a tactical shooter video game developed by Ubisoft Montreal and published by Ubisoft. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on December 1, 2015. The game puts heavy emphasis on environmental destruction and cooperation between players."
 rainbow.price = '25.00'
-rainbow.image.attach(io: File.open(Rails.root.join("app/assets/images/Tom_Clancys_Rainbow_Six_Siege.jpg")), filename: "Tom_Clancy's_Rainbow_Six_Siege.jpg", content_type: 'img/jpg')
+rainbow.image.attach(io: File.open(Rails.root.join('app/assets/images/Tom_Clancys_Rainbow_Six_Siege.jpg')), filename: "Tom_Clancy's_Rainbow_Six_Siege.jpg", content_type: 'img/jpg')
 rainbow.category_id = '2'
 rainbow.product_id = '5'
 rainbow.save
@@ -103,6 +103,6 @@ OrderStatus.create! id: 2, name: 'Placed'
 OrderStatus.create! id: 3, name: 'Complete'
 OrderStatus.create! id: 4, name: 'Cancelled'
 
-About.create! title: "About", content: "We are Numb Dragon, an online game store."
+About.create! title: 'About', content: 'We are Numb Dragon, an online game store.'
 
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

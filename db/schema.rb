@@ -122,7 +122,7 @@ ActiveRecord::Schema.define(version: 2019_03_31_210001) do
     t.decimal "subtotal"
     t.decimal "tax"
     t.decimal "total"
-    t.integer "order_status_id"
+    t.bigint "order_status_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_status_id"], name: "index_orders_on_order_status_id"
@@ -159,4 +159,5 @@ ActiveRecord::Schema.define(version: 2019_03_31_210001) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "orders", "order_statuses"
 end

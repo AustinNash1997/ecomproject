@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class CreateOrders < ActiveRecord::Migration[5.2]
   def change
-    drop_table :orders
     create_table :orders do |t|
       t.decimal :subtotal
       t.decimal :tax

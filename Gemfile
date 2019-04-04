@@ -17,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 gem 'pg'
-
+gem 'rails_12factor', group: :production
 gem "aws-sdk-s3", require: false
 
 # Use CoffeeScript for .coffee assets and views

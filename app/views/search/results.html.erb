@@ -1,0 +1,15 @@
+<h1>Search Results</h1>
+
+<div class="products">
+
+    <% @products.each do |product| %>
+        <%= render partial: 'products/product',
+        locals: {product: product} %>
+    <% end %>
+    <p>product</p>
+    <% @categories.each do |product| %>
+      <%= render partial: 'products/product',
+          locals: {product: product} %>
+    <% end %>
+    <p>category</p>
+</div>

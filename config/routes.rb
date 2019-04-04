@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
 
-  resources :search, only: [:index] do
+  resources :search, only: [:search] do
     collection do
       get 'results'
     end

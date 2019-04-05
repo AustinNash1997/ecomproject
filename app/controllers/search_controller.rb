@@ -5,6 +5,8 @@ class SearchController < ApplicationController
     if params[:search].blank?
       redirect_to(root_path, alert: 'Empty field!') && return
     else
+    @order_item = current_order.order_items.new
+
       @parameter = params[:search].downcase
       @products = Product.all.where('lower(name) LIKE :search', search: "%#{@parameter}%")
       @categories = Product.joins(:category)
